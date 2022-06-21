@@ -10,12 +10,17 @@ import UserNotifications
 
 class AlertListViewController: UITableViewController{
     
+    // 초기화면
     var alerts: [Alert] = []
+    
     let userNotificationCenter = UNUserNotificationCenter.current()
     
+    // AlertListCell 추가시
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UINib(nibName: "AlertListCell", bundle: nil), forCellReuseIdentifier: "AlertListCell")
+        tableView.register(
+            UINib(nibName: "AlertListCell",bundle:nil),
+            forCellReuseIdentifier: "AlertListCell")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,6 +65,8 @@ extension AlertListViewController{
         switch section{
         case 0:
             return "💧 Drink Water"
+        case 1:
+            return "💊 Time for Pill"
         default:
             return nil
         }
@@ -73,6 +80,7 @@ extension AlertListViewController{
         cell.alertSwitch.isOn = alerts[indexPath.row].isOn
         cell.timeLabel.text = alerts[indexPath.row].time
         cell.meridiemLabel.text = alerts[indexPath.row].meridiem
+        cell.emojiLabel.text = alerts[indexPath.row].id
         
         return cell
     }

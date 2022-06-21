@@ -9,6 +9,8 @@ import UIKit
 
 class AddAlertViewController: UIViewController{
     @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var questPicker: UIPickerView!
+    
     var datePicked: ((_ date: Date)-> Void)?
     
     @IBAction func dismissButtonTapped(_ sender: UIBarButtonItem) {

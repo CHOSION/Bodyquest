@@ -82,13 +82,27 @@
                                 </constraints>
                                 <locale key="locale" localeIdentifier="ko_KR"/>
                             </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMK-nV-4Ia">
+                                <rect key="frame" x="20" y="229" width="57" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PjK-iS-dY0">
+                                <rect key="frame" x="20" y="280" width="350" height="216"/>
+                            </pickerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2Fd-Px-4Cz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="QBG-y9-3Lg" firstAttribute="leading" secondItem="2Fd-Px-4Cz" secondAttribute="leading" constant="20" id="CG3-NH-DoF"/>
                             <constraint firstItem="QBG-y9-3Lg" firstAttribute="top" secondItem="zFR-5e-oTw" secondAttribute="bottom" constant="80" id="EMO-Nc-Iel"/>
+                            <constraint firstItem="PjK-iS-dY0" firstAttribute="top" secondItem="CMK-nV-4Ia" secondAttribute="bottom" constant="30" id="Gc8-Gm-fMO"/>
+                            <constraint firstItem="CMK-nV-4Ia" firstAttribute="leading" secondItem="2Fd-Px-4Cz" secondAttribute="leading" constant="20" id="IFD-8g-aLb"/>
+                            <constraint firstItem="PjK-iS-dY0" firstAttribute="leading" secondItem="2Fd-Px-4Cz" secondAttribute="leading" constant="20" id="Tfn-hB-ekp"/>
                             <constraint firstItem="zFR-5e-oTw" firstAttribute="top" secondItem="2Fd-Px-4Cz" secondAttribute="top" id="UgA-VC-Qbx"/>
+                            <constraint firstItem="2Fd-Px-4Cz" firstAttribute="trailing" secondItem="PjK-iS-dY0" secondAttribute="trailing" constant="20" id="hRM-YK-gt5"/>
+                            <constraint firstItem="CMK-nV-4Ia" firstAttribute="top" secondItem="QBG-y9-3Lg" secondAttribute="bottom" constant="40" id="loB-cI-8l5"/>
                             <constraint firstItem="zFR-5e-oTw" firstAttribute="trailing" secondItem="2Fd-Px-4Cz" secondAttribute="trailing" id="ma4-nA-HRC"/>
                             <constraint firstItem="2Fd-Px-4Cz" firstAttribute="trailing" secondItem="RET-wg-RWc" secondAttribute="trailing" constant="20" id="nJO-Yc-COJ"/>
                             <constraint firstItem="zFR-5e-oTw" firstAttribute="leading" secondItem="2Fd-Px-4Cz" secondAttribute="leading" id="w2T-j0-HlY"/>
@@ -97,6 +111,7 @@
                     </view>
                     <connections>
                         <outlet property="datePicker" destination="RET-wg-RWc" id="wYl-Xn-NDz"/>
+                        <outlet property="questPicker" destination="PjK-iS-dY0" id="ElH-vs-wcw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cMs-pW-P80" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

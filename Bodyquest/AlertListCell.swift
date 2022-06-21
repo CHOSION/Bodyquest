@@ -13,8 +13,8 @@ class AlertListCell: UITableViewCell {
     let userNotificationCenter = UNUserNotificationCenter.current()
 
     @IBOutlet weak var meridiemLabel: UILabel!
-    
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var emojiLabel: UILabel!
     @IBOutlet weak var alertSwitch: UISwitch!
     
 //    override func awakeFromNib() {
